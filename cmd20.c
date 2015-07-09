@@ -30,11 +30,20 @@ int main ( int argc, char *argv[] )
                 // instead you must use a special function such as "strcmp"     
                         nCount = 1;
                 }
+                else if (strcmp(argv[count], "-h") == 0) {
+                        printf("Options:\n");
+			printf("\t-n number\tgenerates a random number between 1 and the specified number\n");
+			printf("\t-v\t\tshows the current version of cmd20\n");
+			printf("\t-h\t\tshows the available command line arguments\n");
+                }
+		else if (strcmp(argv[count], "-v") == 0) {
+			printf("cmd20 version: 0.1 (build 1)\n");
+		}
                 else if (nCount == 1) {
                         dice(argv, count);
                         nCount = 0;
-                }
-                else {
+		}
+		else {
                         dice(argv, count);
                 }        
         }
