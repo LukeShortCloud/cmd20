@@ -1,5 +1,5 @@
 # cmd20
-### Version: 0.1.1 
+### Version: 0.1.2
 
 A free and open source dice roller CLI utility programmed in C.
 
