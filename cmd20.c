@@ -69,7 +69,7 @@ int main ( int argc, char *argv[] )
 		}
 		else {
                         dice(argv, count);
-			printf("resultsArray[0] is %d\n", resultsArray[0]);
+			verboseDice(resultsArray);
                 }        
         }
 }
