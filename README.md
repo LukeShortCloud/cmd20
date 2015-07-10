@@ -12,9 +12,11 @@ Install:
 
 Example:
 ```
-# cmd20.1 -n 82
+# cmd20 -n 82
 Rolling a 82 sided die...
 You rolled a 25
+# cmd20 -q -n 8
+6
 ```
 
 Help:
