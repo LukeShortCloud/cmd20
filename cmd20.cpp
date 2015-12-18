@@ -6,34 +6,44 @@
 static int r;
 static int resultsArray[2];
 
+class Dice
+{
+    public:
+        int diceSides;
+};
+
+
 int dice(char *argv[], int count) { // dice roller function
 
-        int diceSides = atoi(argv[count]); //atoi() converts chars to ints
-        srand(time(NULL)); /* seed the built-in rand() function
-                                if you do not then it will NOT be random; 
-                                this will also only be random every second*/
-        int r = rand() % diceSides + 1; // roll
+    Dice Dice1;
+
+    Dice1.diceSides = atoi(argv[count]); //atoi() converts chars to ints
+    srand(time(NULL)); /* seed the built-in rand() function
+                            if you do not then it will NOT be random; 
+                            this will also only be random every second*/
+    int r = rand() % Dice1.diceSides + 1; // roll
 	resultsArray[0] = r;
-	resultsArray[1] = diceSides;
+	resultsArray[1] = Dice1.diceSides;
 	return *resultsArray; // this must be returned as a pointer;
 			      // you can only return one variable so
 			      // an array or struct needs to be used
 }
 
 void verboseDice(int resultsArray[]) {
-        printf("Rolling a %d sided die...\n", resultsArray[1]);
-        printf("You rolled a %d\n", resultsArray[0]);
+    printf("Rolling a %d sided die...\n", resultsArray[1]);
+    printf("You rolled a %d\n", resultsArray[0]);
 }
 
 int main ( int argc, char *argv[] )
 {
-        /* argc = the argument count
-           argv[] = the actual arguments
-           The first command line argument argv[0] is the command itself */
+    /* argc = the argument count
+       argv[] = the actual arguments
+       The first command line argument argv[0] is the command itself */
+
+    //Dice Dice1;
         
-        int count;
-	int diceSides;
-        int nCount = 0; //used for tracking the "-n" CLI option     
+    int count;
+    int nCount = 0; //used for tracking the "-n" CLI option     
 	int qCount = 0; //used for tracking the "-q" CLI option
 
         for (count=1; count < argc; count++) {
