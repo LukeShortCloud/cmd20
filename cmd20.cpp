@@ -6,6 +6,7 @@
 static int r;
 static int resultsArray[2];
 
+
 class Dice
 {
     public:
@@ -29,18 +30,20 @@ int dice(char *argv[], int count) { // dice roller function
 			      // an array or struct needs to be used
 }
 
+
 void verboseDice(int resultsArray[]) {
+
     printf("Rolling a %d sided die...\n", resultsArray[1]);
     printf("You rolled a %d\n", resultsArray[0]);
 }
 
+
 int main ( int argc, char *argv[] )
 {
+
     /* argc = the argument count
        argv[] = the actual arguments
        The first command line argument argv[0] is the command itself */
-
-    //Dice Dice1;
         
     int count;
     int nCount = 0; //used for tracking the "-n" CLI option     
@@ -63,7 +66,7 @@ int main ( int argc, char *argv[] )
 			printf("\t-h\t\tshows the available command line arguments\n");
                 }
 		else if (strcmp(argv[count], "-v") == 0) {
-			printf("cmd20 version: 0.1 (build 2)\n");
+			printf("cmd20 version: 0.2.0\n");
 		}
                 else if (nCount == 1) {
                         if (qCount == 1) {
