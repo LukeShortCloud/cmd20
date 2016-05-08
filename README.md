@@ -1,5 +1,5 @@
 # cmd20
-### Version: 0.2.0
+### Version: 0.3.0-dev
 
 A free and open source dice roller CLI utility programmed in C++.
 
@@ -12,8 +12,8 @@ Automatic Install:
 
 Manual Install:
 ```
-# g++ ./cmd20.cpp -o cmd20; mv cmd20 /usr/local/bin/
-# mv ./man/cmd20.1 /usr/share/man/man1/
+# g++ ./cmd20.cpp -o cmd20; cp cmd20 /usr/local/bin/
+# cp ./man/cmd20.1 /usr/share/man/man1/
 ```
 
 Example:
